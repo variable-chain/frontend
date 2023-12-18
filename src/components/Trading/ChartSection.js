@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import TradingViewWidget from "../Widgets/TradingViewWidget";
 import TradingDepthChartWidget from "../Widgets/TradingDepthChardWidget";
 import ProfileWidget from "../Widgets/ProfileWidget";
-import RiskLimitWidget from "../Widgets/RiskLimitWidget";
+import AnalysisWidget from "../Widgets/AnalysisWidget";
 import MarketWidget from "../Widgets/MarketWidget";
 
 function ChartSection() {
@@ -27,7 +27,9 @@ function ChartSection() {
         <li className="cursor-pointer hover:text-[#4069FF]">Depth</li>
         <li className="cursor-pointer hover:text-[#4069FF]">Funding Rate</li>
         <li className="cursor-pointer hover:text-[#4069FF]">Details</li>
-        <li className="cursor-pointer hover:text-[#4069FF]">Risk Limit</li>
+        <li className="cursor-pointer hover:text-[#4069FF]">
+          Technical Analysis
+        </li>
         <li className="cursor-pointer hover:text-[#4069FF]">All Markets</li>
       </ul>
       <div className="w-full h-full">
@@ -35,7 +37,7 @@ function ChartSection() {
         {selected === "Depth" && <TradingDepthChartWidget />}
         {selected === "Details" && <ProfileWidget />}
         {selected === "Funding Rate" && <FundingRateWidget />}
-        {selected === "Risk Limit" && <RiskLimitWidget />}
+        {selected === "Technical Analysis" && <AnalysisWidget />}
         {selected === "All Markets" && <MarketWidget />}
       </div>
     </Paper>

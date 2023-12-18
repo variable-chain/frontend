@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, memo } from "react";
 
-function RiskLimitWidget() {
+function AnalysisWidget() {
   const container = useRef();
 
   useEffect(() => {
@@ -34,4 +34,4 @@ function RiskLimitWidget() {
   );
 }
 
-export default memo(RiskLimitWidget);
+export default memo(AnalysisWidget);
