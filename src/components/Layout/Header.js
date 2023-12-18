@@ -64,7 +64,7 @@ function Header() {
         </ul>
       </div>
       <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
-        <IconButton size="large" aria-label="show 4 new mails" color="primary" onClick={themeHandler}>
+        <IconButton size="large" aria-label="show 4 new mails" color="primary">
           <Badge
             //   badgeContent={0}
             color="error"
