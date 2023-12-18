@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import TradingViewWidget from "../Widgets/TradingViewWidget";
 import TradingDepthChartWidget from "../Widgets/TradingDepthChardWidget";
 import ProfileWidget from "../Widgets/ProfileWidget";
+import RiskLimitWidget from "../Widgets/RiskLimitWidget";
+import MarketWidget from "../Widgets/MarketWidget";
 
 function ChartSection() {
   const [selected, setSelected] = useState("Price");
@@ -26,11 +28,15 @@ function ChartSection() {
         <li className="cursor-pointer hover:text-[#4069FF]">Funding Rate</li>
         <li className="cursor-pointer hover:text-[#4069FF]">Details</li>
         <li className="cursor-pointer hover:text-[#4069FF]">Risk Limit</li>
+        <li className="cursor-pointer hover:text-[#4069FF]">All Markets</li>
       </ul>
       <div className="w-full h-full">
         {selected === "Price" && <TradingViewWidget />}
         {selected === "Depth" && <TradingDepthChartWidget />}
         {selected === "Details" && <ProfileWidget />}
+        {selected === "Funding Rate" && <FundingRateWidget />}
+        {selected === "Risk Limit" && <RiskLimitWidget />}
+        {selected === "All Markets" && <MarketWidget />}
       </div>
     </Paper>
   );

@@ -33,14 +33,14 @@ export default function TradingViewWidget() {
       ) {
         new window.TradingView.widget({
           autosize: true,
-          symbol: "BITSTAMP:BTCUSD",
+          symbol: "COINBASE:BTCUSD",
           interval: "D",
           timezone: "Etc/UTC",
           theme: "dark",
           style: "1",
           locale: "in",
           toolbar_bg: "#f1f3f6",
-          enable_publishing: false,
+          enable_publishing: true,
           allow_symbol_change: true,
           container_id: "tradingview_59880",
         });
@@ -51,9 +51,6 @@ export default function TradingViewWidget() {
   return (
     <div className="tradingview-widget-container" style={{ height: "100%" }}>
       <div id="tradingview_59880" style={{ height: "100%" }} />
-      {/* <div className="tradingview-widget-copyright">
-        <a href="https://in.tradingview.com/" rel="noopener nofollow" target="_blank"><span className="blue-text">Track all markets on TradingView</span></a>
-      </div> */}
     </div>
   );
 }
