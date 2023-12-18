@@ -6,8 +6,10 @@ import React, { useState } from "react";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import HelpIcon from "@mui/icons-material/Help";
+import { useTheme } from "@mui/material";
 
 import { Web3NetworkSwitch } from "@web3modal/react";
+import Link from "next/link";
 
 function Header() {
   const [isSigningRequired, setIsSigningRequired] = useState(false);
@@ -40,19 +42,21 @@ function Header() {
   return (
     <div className="flex justify-between h-16 p-4 bg-[#171A1E]">
       <div className="flex">
-        <Image src="/logo-VE.svg" height={30} width={30} />
+        <Link href="/">
+          <Image src="/logo-VE.svg" height={30} width={30} />
+        </Link>
         <ul className="flex text-[#B9B9B999] gap-4 ml-10 items-center">
           <li className="p-2 cursor-pointer hover:border-b-2 hover:text-[#4069FF] hover:border-[#4069FF]">
-            Trade
+            <Link href="/trade">Trade</Link>
           </li>
           <li className="p-2 cursor-pointer hover:border-b-2 hover:text-[#4069FF] hover:border-[#4069FF]">
-            Profile
+            <Link href="/profile">Profile</Link>
           </li>
           <li className="p-2 cursor-pointer hover:border-b-2 hover:text-[#4069FF] hover:border-[#4069FF]">
-            Rewards
+            <Link href="/rewards">Rewards</Link>
           </li>
           <li className="p-2 cursor-pointer hover:border-b-2 hover:text-[#4069FF] hover:border-[#4069FF]">
-            Governance
+            <Link href="/governance">Governance</Link>
           </li>
           <li className="p-2 cursor-pointer hover:border-b-2 hover:text-[#4069FF] hover:border-[#4069FF]">
             More
@@ -60,7 +64,7 @@ function Header() {
         </ul>
       </div>
       <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
-        <IconButton size="large" aria-label="show 4 new mails" color="primary">
+        <IconButton size="large" aria-label="show 4 new mails" color="primary" onClick={themeHandler}>
           <Badge
             //   badgeContent={0}
             color="error"
