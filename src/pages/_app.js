@@ -70,6 +70,8 @@ export default function App(props) {
     // Customize other theme properties as needed
   };
 
+  // document.body.style.backgroundColor = "primary.main";
+
   useEffect(() => {
     setReady(true);
   }, []);

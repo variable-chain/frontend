@@ -26,7 +26,7 @@ const ConnectWalletCard = () => {
             borderRadius: "0.5rem",
             textTransform: "none",
             mt: 4,
-            color: "primary.main", backgroundColor: "inherit", bgcolor: 'primary.text'
+            color: "#333", bgcolor: 'primary.text'
             // "&:hover": {
             //   backgroundColor: "#4069FF",
             // },
@@ -40,7 +40,7 @@ const ConnectWalletCard = () => {
             borderRadius: "0.5rem",
             textTransform: "none",
             mt: 2,
-            color: "primary.main", backgroundColor: "inherit", bgcolor: 'primary.text',
+            color: "#333", bgcolor: 'primary.text',
             "&:hover": {
               backgroundColor: "#4069FF",
             },

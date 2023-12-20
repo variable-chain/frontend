@@ -1,4 +1,4 @@
-import { Box, Button, Divider } from "@mui/material";
+import { Box, Button, ButtonBase, Divider } from "@mui/material";
 import React, { useState } from "react";
 import Image from "next/image";
 import { Typography, Checkbox } from "@mui/material";
@@ -17,15 +17,16 @@ const btnClass = {
 };
 const textBtnClass = {
   textTransform: "none",
+  color: "primary.text",
   "&:hover": {
-    color: "#4069FF",
+    color: "primary.main",
   },
 };
 
 function OpenSection() {
   const [checked, setChecked] = useState(false);
   const CustomCheckbox = styled(Checkbox)(({ theme }) => ({
-    color: "primary.main",
+    // color: "primary.main",
     "&.Mui-checked": {
       // color: "#78797B",
     },
@@ -46,7 +47,7 @@ function OpenSection() {
     setIsHovered(false);
   };
   return (
-    <Box sx={{ color: "primary.text", backgroundColor: "inherit", bgcolor: 'primary.main' }}>
+    <Box sx={{ color: "primary.text", bgcolor: 'primary.main' }}>
       <div className="flex gap-2 mb-2">
         <Button variant="contained" sx={btnClass}>
           Cross
@@ -59,15 +60,15 @@ function OpenSection() {
       <Box sx={{ display: "flex" }}>
         <Button
           onClick={() => setButton1(true)}
-          variant="text"
+          variant="contained"
           sx={textBtnClass}
         >
           Limit
         </Button>
-        <Button variant="text" sx={textBtnClass}>
+        <Button variant="contained" sx={textBtnClass}>
           Market
         </Button>
-        <Button variant="text" sx={textBtnClass}>
+        <Button variant="contained" sx={textBtnClass}>
           Stop Limit
         </Button>
         <Box sx={{ display: "flex", flex: 1 }}>

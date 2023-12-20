@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <Box sx={{ color: "primary.text", backgroundColor: "inherit", bgcolor: 'primary.main' }}>
+    <Box sx={{ color: "primary.text", bgcolor: 'primary.main' }}>
       {/* <div className="flex gap-4"> */}
       <Grid container spacing={2}>
         <Grid item xs={9}>

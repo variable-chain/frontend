@@ -77,7 +77,7 @@ function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{ paddingLeft: "20px", paddingRight: "20px" }}>
           <Image src="/logo-VE.svg" height={30} width={30} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -148,7 +148,7 @@ function Header() {
               </Button>
             ))}
           </Box>
-          <Box>
+          <Box sx={{ display: "flex", alignItems: "center", justifyItems: "center", }}>
             <IconButton
               size="large"
               aria-label=""
@@ -165,7 +165,7 @@ function Header() {
                 <WbSunnyIcon />
               </Badge>
             </IconButton>
-            <IconButton
+            {/* <IconButton
               size="large"
               edge="end"
               aria-label="account of current user"
@@ -176,7 +176,7 @@ function Header() {
 
             >
               <NotificationsIcon />
-            </IconButton>
+            </IconButton> */}
 
             <Web3NetworkSwitch onConnect={handleConnect} />
 

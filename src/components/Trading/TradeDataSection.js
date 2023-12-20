@@ -75,7 +75,7 @@ function TradeDataSection() {
             <Tab
               label="Recent Trades"
               {...a11yProps(1)}
-              sx={{ textTransform: "none", }}
+              sx={{ textTransform: "none", color: "primary.text" }}
             />
           </Tabs>
         </Box>

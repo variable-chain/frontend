@@ -75,7 +75,7 @@ function TableSection(props) {
             <Tabs
               value={valuee}
               onChange={handleChange}
-              textColor="secondary"
+              textColor="primary.text"
               indicatorColor="secondary"
             >
               <Tab
