@@ -14,15 +14,16 @@ function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
-    <div
+    <Box
       role="tabpanel"
+      color="inherit"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && <Box>{children}</Box>}
-    </div>
+      {value === index && <Box color="inherit">{children}</Box>}
+    </Box>
   );
 }
 
@@ -57,8 +58,8 @@ function CryptoDetails() {
   };
 
   return (
-    <div className="flex justify-between items-center h-16 p-4 bg-[#171A1E] border-t border-gray-400 text-white">
-      <div className="flex gap-4 items-center">
+    <Box color="inherit" background="inherit" sx={{ color: "primary.text", backgroundColor: "inherit", bgcolor: 'primary.main' }} className="flex justify-between items-center h-16 p-4 border-t ">
+      <Box color="inherit" background="inherit" className="flex gap-4 items-center">
         <div
           className="flex gap-4 items-center cursor-pointer relative"
           onClick={() => setChecked(!checked)}
@@ -79,14 +80,15 @@ function CryptoDetails() {
                   borderRadius: "0.5rem",
                 },
                 borderRadius: "0.5rem",
+                color: "primary.text", bgcolor: 'primary.main'
               }}
-              className="bg-[#171A1E] z-50"
+              className="z-50"
             >
-              <Paper elevation={3} sx={{ background: "#171A1E" }}>
-                <div className="py-2 px-3 bg-gray-800 text-white text-sm">
+              <Paper elevation={3} sx={{ background: "inherit" }}>
+                <div className="py-2 px-3  text-sm">
                   Select Market
                 </div>
-                <ul className="bg-[#171A1E] text-white p-2">
+                <ul className="bg-inherit p-2">
                   <li className="flex justify-between text-xs items-center hover:bg-gray-800 p-2">
                     <span className="flex items-center gap-2">
                       <img src={coinData[0]?.img} alt="btcusd" />
@@ -102,49 +104,49 @@ function CryptoDetails() {
             </Box>
           </Slide>
         </div>
-        <Divider orientation="vertical" flexItem className="bg-[#78797B]" />
+        <Divider orientation="vertical" flexItem />
         <p className="text-lg">{coinData[0]?.indexPrice}</p>
-        <Divider orientation="vertical" flexItem className="bg-[#78797B]" />
+        <Divider orientation="vertical" flexItem />
         <div className="text-center">
-          <p className="text-xs text-[#78797B]">Index Price</p>
+          <p className="text-xs">Index Price</p>
           <p className="text-xs mt-1">{coinData[0]?.indexPrice}</p>
         </div>
-        <Divider orientation="vertical" flexItem className="bg-[#78797B]" />
+        <Divider orientation="vertical" flexItem />
         <div className="text-center">
-          <p className="text-xs text-[#78797B]">Oracle Price</p>
+          <p className="text-xs">Oracle Price</p>
           <p className="text-xs mt-1">{coinData[0]?.oraclePrice}</p>
         </div>
-        <Divider orientation="vertical" flexItem className="bg-[#78797B]" />
+        <Divider orientation="vertical" flexItem />
         <div className="text-center">
-          <p className="text-xs text-[#78797B]">24H Change</p>
+          <p className="text-xs">24H Change</p>
           <p className="text-xs mt-1">{coinData[0]?.h_Change}</p>
         </div>
-        <Divider orientation="vertical" flexItem className="bg-[#78797B]" />
+        <Divider orientation="vertical" flexItem />
         <div className="text-center">
-          <p className="text-xs text-[#78797B]">24H High</p>
+          <p className="text-xs">24H High</p>
           <p className="text-xs mt-1">{coinData[0]?.h_High}</p>
         </div>
-        <Divider orientation="vertical" flexItem className="bg-[#78797B]" />
+        <Divider orientation="vertical" flexItem />
         <div className="text-center">
-          <p className="text-xs text-[#78797B]">24H Low</p>
+          <p className="text-xs">24H Low</p>
           <p className="text-xs mt-1">{coinData[0]?.h_Low}</p>
         </div>
-        <Divider orientation="vertical" flexItem className="bg-[#78797B]" />
+        <Divider orientation="vertical" flexItem />
         <div className="text-center">
-          <p className="text-xs text-[#78797B]">Funding/Countdown</p>
+          <p className="text-xs">Funding/Countdown</p>
           <p className="text-xs mt-1  flex gap-3 items-center">
             <span className="text-[#EBBC2E]">{coinData[0]?.funding}</span>
             <span>{coinData[0]?.countdown}</span>
           </p>
         </div>
-      </div>
+      </Box>
 
       <IconButton
         size="large"
         edge="end"
         aria-label="settings"
         aria-haspopup="true"
-        color="primary"
+        color="inherit"
         className="ml-auto"
         onClick={handleOpenModal}
       >
@@ -166,13 +168,13 @@ function CryptoDetails() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            bgcolor: "#171A1E",
+            bgcolor: "primary.main",
             border: "1px solid #232529",
             boxShadow: 24,
             borderRadius: 2,
           }}
         >
-          <Box class="flex text-[#B9B9B999] items-center bg-[#171A1E] py-4 px-4 border-b border-gray-500">
+          <Box class="flex  items-center py-4 px-4 border-b border-gray-500">
             <h2 id="modal-title" style={{ display: "flex", flex: 1 }}>
               Preference
             </h2>
@@ -269,7 +271,7 @@ function CryptoDetails() {
           </Box>
         </Box>
       </Modal>
-    </div>
+    </Box>
   );
 }
 

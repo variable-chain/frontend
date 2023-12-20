@@ -22,7 +22,7 @@ function AssetsCard({ show }) {
       >
         <Typography
           variant="body1"
-          sx={{ color: "#D9D9D9", fontSize: 14, fontWeight: 500, mr: 1 }}
+          sx={{ color: "primary.text", fontSize: 14, fontWeight: 500, mr: 1 }}
         >
           Assets
         </Typography>
@@ -37,7 +37,7 @@ function AssetsCard({ show }) {
               textTransform: "none",
               height: 30,
               // backgroundColor: "#2C3138",
-              color: "#fff",
+              color: "primary.text",
               // "&:hover": {
               //   backgroundColor: "#4069FF",
               // },

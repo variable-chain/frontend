@@ -57,7 +57,7 @@ function TradeDataSection() {
     <Paper
       elevation={1}
       className="p-2 rounded-none h-full"
-      sx={{ background: "#171A1E" }}
+      sx={{ color: "primary.text", backgroundColor: "inherit", bgcolor: 'primary.main' }}
     >
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -70,12 +70,12 @@ function TradeDataSection() {
             <Tab
               label="Order Book"
               {...a11yProps(0)}
-              sx={{ textTransform: "none", color: "#78797B" }}
+              sx={{ textTransform: "none", }}
             />
             <Tab
               label="Recent Trades"
               {...a11yProps(1)}
-              sx={{ textTransform: "none", color: "#78797B" }}
+              sx={{ textTransform: "none", }}
             />
           </Tabs>
         </Box>
@@ -118,9 +118,9 @@ function TradeDataSection() {
               sx={{
                 width: "70px",
                 height: "30px",
-                color: "#78797B",
+                color: "primary.text",
                 fontSize: "11px",
-                borderColor: "#78797B",
+                borderColor: "primary.main",
                 outline: "none",
               }}
             >
