@@ -14,13 +14,13 @@ const CustomTextInputWithDropdown = ({ placeholder, dropdownLabel }) => {
 
   const textBtnClass = {
     textTransform: "none",
-    color: "#fff",
+    color: "primary.text",
   };
 
   return (
-    <div
+    <Box
       style={{
-        backgroundColor: "#2C3138",
+        backgroundColor: "primary.main",
         borderRadius: 3,
         display: "flex",
         flexDirection: "row",
@@ -31,7 +31,7 @@ const CustomTextInputWithDropdown = ({ placeholder, dropdownLabel }) => {
     >
       <Typography
         variant="body1"
-        sx={{ color: "#78797B", fontSize: 13, fontWeight: 400, flex: 1, ml: 1 }}
+        sx={{ color: "primary.text", fontSize: 13, fontWeight: 400, flex: 1, ml: 1 }}
       >
         {placeholder}
       </Typography>
@@ -49,7 +49,7 @@ const CustomTextInputWithDropdown = ({ placeholder, dropdownLabel }) => {
           }}
         />
       </Box>
-    </div>
+    </Box>
   );
 };
 

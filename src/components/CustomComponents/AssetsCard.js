@@ -22,7 +22,7 @@ function AssetsCard({ show }) {
       >
         <Typography
           variant="body1"
-          sx={{ color: "#D9D9D9", fontSize: 14, fontWeight: 500, mr: 1 }}
+          sx={{ color: "primary.text", fontSize: 14, fontWeight: 500, mr: 1 }}
         >
           Assets
         </Typography>
@@ -37,7 +37,7 @@ function AssetsCard({ show }) {
               textTransform: "none",
               height: 30,
               // backgroundColor: "#2C3138",
-              color: "#fff",
+              color: "primary.text",
               // "&:hover": {
               //   backgroundColor: "#4069FF",
               // },
@@ -52,8 +52,8 @@ function AssetsCard({ show }) {
               borderRadius: "0.2rem",
               height: 30,
               textTransform: "none",
-              backgroundColor: "#2C3138",
-              color: "#fff",
+              backgroundColor: "primary.main",
+              color: "primary.text",
               "&:hover": {
                 backgroundColor: "#4069FF",
               },
@@ -76,13 +76,13 @@ function AssetsCard({ show }) {
           >
             <Typography
               variant="body1"
-              sx={{ color: "#78797B", fontSize: 13, fontWeight: 600 }}
+              sx={{ color: "primary.text", fontSize: 13, fontWeight: 600 }}
             >
               Available Margin
             </Typography>
             <Typography
               variant="body1"
-              sx={{ color: "#78797B", fontSize: 13, fontWeight: 600 }}
+              sx={{ color: "primary.text", fontSize: 13, fontWeight: 600 }}
             >
               -USDT
             </Typography>

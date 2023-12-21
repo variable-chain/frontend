@@ -9,13 +9,13 @@ const ConnectWalletCard = () => {
       display="flex"
       alignItems="center"
       justifyContent={"center"}
-      sx={{ p: 2 }}
+      sx={{ p: 2, color: "primary.text", backgroundColor: "inherit", bgcolor: 'primary.main' }}
     >
       <Image src="/logo-VE-full.svg" height={30} width={139} />
       <Typography
         textAlign={"center"}
         variant="body1"
-        sx={{ color: "#fff", mt: 3 }}
+        sx={{ color: "primary.text", backgroundColor: "inherit", bgcolor: 'primary.main', mt: 3 }}
       >
         Connect your wallet to start trading cryptocurrency.
       </Typography>
@@ -26,9 +26,7 @@ const ConnectWalletCard = () => {
             borderRadius: "0.5rem",
             textTransform: "none",
             mt: 4,
-
-            // backgroundColor: "#2C3138",
-            color: "#fff",
+            color: "#333", bgcolor: 'primary.text'
             // "&:hover": {
             //   backgroundColor: "#4069FF",
             // },
@@ -42,8 +40,7 @@ const ConnectWalletCard = () => {
             borderRadius: "0.5rem",
             textTransform: "none",
             mt: 2,
-            backgroundColor: "#2C3138",
-            color: "#fff",
+            color: "#333", bgcolor: 'primary.text',
             "&:hover": {
               backgroundColor: "#4069FF",
             },

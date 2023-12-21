@@ -12,16 +12,16 @@ function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
-    <div
+    <Box
       role="tabpanel"
       hidden={value !== index}
       id={`full-width-tabpanel-${index}`}
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
-      className="bg-[#1F2328]"
+      className=""
     >
       {value === index && <Box sx={{ p: 1 }}>{children}</Box>}
-    </div>
+    </Box>
   );
 }
 
@@ -51,9 +51,9 @@ function BuySellSection() {
   };
 
   return (
-    <Paper elevation={1} className="h-96" sx={{ background: "#1F2328" }}>
+    <Paper elevation={1} className="h-96" sx={{ color: "primary.text", backgroundColor: "inherit", bgcolor: 'primary.main' }}>
       <Box sx={{ bgcolor: "background.paper" }}>
-        <AppBar position="static" sx={{ background: "#171A1E" }}>
+        <AppBar position="static">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -73,10 +73,10 @@ function BuySellSection() {
             />
           </Tabs>
         </AppBar>
-        <TabPanel value={value} index={0} dir={theme.direction}>
+        <TabPanel value={value} index={0} dir={theme.direction} sx={{ color: "primary.text", backgroundColor: "inherit", bgcolor: 'primary.main' }}>
           <OpenSection />
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
+        <TabPanel value={value} index={1} dir={theme.direction} sx={{ color: "primary.text", backgroundColor: "inherit", bgcolor: 'primary.main' }}>
           Item Two
         </TabPanel>
       </Box>

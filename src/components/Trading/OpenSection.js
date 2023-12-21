@@ -1,4 +1,4 @@
-import { Box, Button, Divider } from "@mui/material";
+import { Box, Button, ButtonBase, Divider } from "@mui/material";
 import React, { useState } from "react";
 import Image from "next/image";
 import { Typography, Checkbox } from "@mui/material";
@@ -14,22 +14,21 @@ const btnClass = {
   borderRadius: "0.5rem",
   textTransform: "none",
   width: "100%",
-  background: "#474D57",
 };
 const textBtnClass = {
   textTransform: "none",
-  color: "#78797B",
+  color: "primary.text",
   "&:hover": {
-    color: "#4069FF",
+    color: "primary.main",
   },
 };
 
 function OpenSection() {
   const [checked, setChecked] = useState(false);
   const CustomCheckbox = styled(Checkbox)(({ theme }) => ({
-    color: "#78797B",
+    // color: "primary.main",
     "&.Mui-checked": {
-      color: "#78797B",
+      // color: "#78797B",
     },
   }));
   const handleCheckboxChange = (event) => {
@@ -48,7 +47,7 @@ function OpenSection() {
     setIsHovered(false);
   };
   return (
-    <div>
+    <Box sx={{ color: "primary.text", bgcolor: 'primary.main' }}>
       <div className="flex gap-2 mb-2">
         <Button variant="contained" sx={btnClass}>
           Cross
@@ -57,19 +56,19 @@ function OpenSection() {
           20x
         </Button>
       </div>
-      <Divider flexItem className="bg-[#78797B]" />
+      <Divider flexItem />
       <Box sx={{ display: "flex" }}>
         <Button
           onClick={() => setButton1(true)}
-          variant="text"
+          variant="contained"
           sx={textBtnClass}
         >
           Limit
         </Button>
-        <Button variant="text" sx={textBtnClass}>
+        <Button variant="contained" sx={textBtnClass}>
           Market
         </Button>
-        <Button variant="text" sx={textBtnClass}>
+        <Button variant="contained" sx={textBtnClass}>
           Stop Limit
         </Button>
         <Box sx={{ display: "flex", flex: 1 }}>
@@ -94,14 +93,14 @@ function OpenSection() {
       <Box sx={{ display: "flex", flexDirection: "row", mx: 1.5 }}>
         <Typography
           variant="body1"
-          sx={{ color: "#78797B", fontSize: 13, fontWeight: 600 }}
+          sx={{ color: "primary.text", fontSize: 13, fontWeight: 600 }}
         >
           Avbl
         </Typography>
 
         <Typography
           variant="body1"
-          sx={{ color: "#fff", fontSize: 13, fontWeight: 400, ml: 1 }}
+          sx={{ color: "primary.text", fontSize: 13, fontWeight: 400, ml: 1 }}
         >
           2344.54 USD
         </Typography>
@@ -134,13 +133,13 @@ function OpenSection() {
         <Box sx={{ display: "flex", flexDirection: "row" }}>
           <Typography
             variant="body1"
-            sx={{ color: "#78797B", fontSize: 13, fontWeight: 600 }}
+            sx={{ color: "primary.text", fontSize: 13, fontWeight: 600 }}
           >
             Buy
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: "#fff", fontSize: 13, fontWeight: 400, ml: 1 }}
+            sx={{ color: "primary.text", fontSize: 13, fontWeight: 400, ml: 1 }}
           >
             2344.54 USD
           </Typography>
@@ -149,13 +148,13 @@ function OpenSection() {
         <Box sx={{ display: "flex", flexDirection: "row" }}>
           <Typography
             variant="body1"
-            sx={{ color: "#78797B", fontSize: 13, fontWeight: 600 }}
+            sx={{ color: "primary.text", fontSize: 13, fontWeight: 600 }}
           >
             Sell
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: "#fff", fontSize: 13, fontWeight: 400, ml: 1 }}
+            sx={{ color: "primary.text", fontSize: 13, fontWeight: 400, ml: 1 }}
           >
             2344.54 USD
           </Typography>
@@ -193,7 +192,7 @@ function OpenSection() {
           alignSelf: "center",
         }}
       ></Box>
-    </div>
+    </Box>
   );
 }
 

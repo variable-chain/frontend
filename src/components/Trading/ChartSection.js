@@ -16,9 +16,9 @@ function ChartSection() {
   };
   console.log(selected);
   return (
-    <Paper elevation={1} className="w-full" sx={{ height: "91%" }}>
+    <Paper elevation={1} sx={{ color: "primary.text", backgroundColor: "inherit", bgcolor: 'primary.main', height: "91%" }} className="w-full">
       <ul
-        className="flex text-[#B9B9B999] gap-6 items-center py-3 px-4 bg-[#171A1E] border-b border-gray-400"
+        className="flex gap-6 items-center py-3 px-4 border-b border-gray-400"
         onClick={handleSelected}
       >
         <li className="cursor-pointer hover:text-[#4069FF]">Price</li>

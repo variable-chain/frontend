@@ -65,9 +65,9 @@ function TableSection(props) {
   };
   console.log(selected);
   return (
-    <Paper elevation={1} className="w-full">
+    <Paper elevation={1} className="w-full" sx={{ color: "primary.text", backgroundColor: "inherit", bgcolor: 'primary.main' }}>
       <Box
-        className="flex text-[#B9B9B999] gap-6 items-center py-3  mt-4 px-4 bg-[#171A1E] "
+        className="flex gap-6 items-center py-3  mt-4 px-4"
         onClick={handleSelected}
       >
         <Box sx={{ width: "100%" }}>
@@ -75,37 +75,37 @@ function TableSection(props) {
             <Tabs
               value={valuee}
               onChange={handleChange}
-              textColor="secondary"
+              textColor="primary.text"
               indicatorColor="secondary"
             >
               <Tab
                 label="Positions"
-                sx={{ textTransform: "none", color: "#78797B" }}
+                sx={{ textTransform: "none", }}
                 {...a11yProps(0)}
               />
               <Tab
                 label="Closed P&L"
-                sx={{ textTransform: "none", color: "#78797B" }}
+                sx={{ textTransform: "none", }}
                 {...a11yProps(1)}
               />
               <Tab
                 label="Active"
-                sx={{ textTransform: "none", color: "#78797B" }}
+                sx={{ textTransform: "none", }}
                 {...a11yProps(2)}
               />
               <Tab
                 label="Conditional"
-                sx={{ textTransform: "none", color: "#78797B" }}
+                sx={{ textTransform: "none", }}
                 {...a11yProps(3)}
               />
               <Tab
                 label="Filled"
-                sx={{ textTransform: "none", color: "#78797B" }}
+                sx={{ textTransform: "none", }}
                 {...a11yProps(4)}
               />
               <Tab
                 label="Order History"
-                sx={{ textTransform: "none", color: "#78797B" }}
+                sx={{ textTransform: "none", }}
                 {...a11yProps(5)}
               />
               <FormControlLabel

@@ -3,9 +3,9 @@ import "@/styles/globals.css";
 import * as React from "react";
 // import PropTypes from "prop-types";
 import Head from "next/head";
-import { ThemeProvider } from "@mui/material/styles";
+// import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { CacheProvider } from "@emotion/react";
+import { CacheProvider, ThemeContext } from "@emotion/react";
 import theme from "@/components/Layout/theme";
 import createEmotionCache from "@/components/Layout/createEmotionCache";
 import {
@@ -26,6 +26,7 @@ import {
   bsc,
   arbitrum,
 } from "wagmi/chains";
+import { ThemeProvider } from "@/utils/themeContext";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -68,6 +69,8 @@ export default function App(props) {
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Example box shadow
     // Customize other theme properties as needed
   };
+
+  // document.body.style.backgroundColor = "primary.main";
 
   useEffect(() => {
     setReady(true);
